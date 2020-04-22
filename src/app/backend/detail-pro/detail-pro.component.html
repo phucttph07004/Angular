@@ -1,0 +1,30 @@
+<form style="margin-top: 30px; margin-left: 30px; width: 600px;">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Tên Sản Phẩm</label>
+        <input style="font-size: 18px;" type="email" class="form-control" id="exampleFormControlInput1" value="{{ Product.name }}">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Nhãn Hiệu</label>
+        <input style="font-size: 18px;" type="email" class="form-control" id="exampleFormControlInput1" value="{{ Product.brand }}">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Ảnh Sản Phẩm</label>
+        <img src="{{ Product.image }}" alt="">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Giá Sản Phẩm</label>
+        <input style="font-size: 18px;" type="text" class="form-control" id="exampleFormControlInput1" value="$ {{ Product.price }}">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Số Lượng Sản Phẩm</label>
+        <input style="font-size: 18px;" type="email" class="form-control" id="exampleFormControlInput1" value="{{ Product.quantity }}">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Mô tả Ngắn</label>
+        <textarea style="font-size: 18px;" class="form-control" id="exampleFormControlTextarea1" rows="3">{{ Product.short_description }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Mô tả Sản Phẩm</label>
+        <textarea style="font-size: 18px;" class="form-control" id="exampleFormControlTextarea1" rows="3">{{ Product.description }}</textarea>
+    </div>
+</form>

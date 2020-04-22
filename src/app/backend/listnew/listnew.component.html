@@ -1,0 +1,49 @@
+<div class="card-header">
+    <!-- <h3 class="card-title">
+        <i class="fas fa-chart-pie mr-1"></i> Sales
+    </h3> -->
+    <table class="table" style="width: 1010px;">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Image</th>
+                <th scope="col">Title</th>
+                <th scope="col">description</th>
+                <th scope="col">Created_at</th>
+                <th scope="col">
+                    <a routerLink="/admin/create-new">
+                        <button style="width: 70px;font-size: 14px;" type="button" class="btn btn-primary">Create</button>
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="position: relative;" id="tr" *ngFor="let News of News | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize let i=index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td><img src="{{ News.image }}" width="60px"></td>
+                <td>{{ News.title }}</td>
+                <td>{{ News.description }}</td>
+                <td><input type="date" value="{{ News.created_at }}"></td>
+                <td></td>
+                <div class="hover">
+                    <a [routerLink]="['/admin/detail-new/',News.id]" class="single-btn">
+                        <span class="glyphicon glyphicon-eye-open">
+                            <i class="i1">Detail</i>
+                        </span>
+                    </a>
+                    <a [routerLink]="['/admin/edit-new/',News.id]" class="single-btn">
+                        <span style="margin-left: 15px;" class="glyphicon glyphicon-list-alt">
+                            <i class="i1">Update</i>
+                        </span>
+                    </a>
+                    <a style="cursor: pointer;color: blue;" (click)="Delete(News.id)" class="single-btn">
+                        <span style="margin-left: 15px;" class="glyphicon glyphicon-trash">
+                            <i class="i1">Delete</i>
+                        </span>
+                    </a>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="News.length" style="margin-left: 460px;float: left;"></ngb-pagination>

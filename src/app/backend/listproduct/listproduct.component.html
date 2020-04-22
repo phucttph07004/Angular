@@ -1,0 +1,55 @@
+<div class="card-header">
+    <!-- <h3 class="card-title">
+        <i class="fas fa-chart-pie mr-1"></i> Sales
+    </h3> -->
+    <table class="table" style="width: 1010px;">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">
+                    <a routerLink="/admin/create-pro">
+                        <button style="width: 70px;font-size: 14px;" type="button" class="btn btn-primary">Create</button>
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="position: relative;" id="tr" *ngFor="let pro of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize let i=index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td><img src="{{ pro.image }}" width="60px"></td>
+                <td>{{ pro.name }}</td>
+                <td>{{ pro.quantity }}</td>
+                <td>$ {{ pro.price }}</td>
+                <td></td>
+                <div class="hover">
+                    <a [routerLink]="['/admin/detail/',pro.id]" class="single-btn">
+                        <span class="glyphicon glyphicon-eye-open">
+                            <i class="i1">Detail</i>
+                        </span>
+                    </a>
+                    <a [routerLink]="['/admin/edit/',pro.id]" class="single-btn">
+                        <span style="margin-left: 15px;" class="glyphicon glyphicon-list-alt">
+                            <i class="i1">Update</i>
+                        </span>
+                    </a>
+                    <a onclick="return xoa()" style="cursor: pointer;color: blue;" (click)="Delete(pro.id)" class="single-btn">
+                        <span style="margin-left: 15px;" class="glyphicon glyphicon-trash">
+                            <i class="i1">Delete</i>
+                        </span>
+                    </a>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+    <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="products.length" style="margin-left: 460px;float: left;"></ngb-pagination>
+</div>
+
+<script>
+    function xoa() {
+        return confirm('Bạn có muốn xóa không');
+    }
+</script>

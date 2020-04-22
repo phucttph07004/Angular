@@ -1,0 +1,30 @@
+<script>
+    $(window).load(function() {
+        $('.carousel').carousel({
+            interval: 1000
+        })
+    });
+</script>
+<section class="hero-area hero-slider-4 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 offset-lg-3">
+
+                <ngb-carousel>
+                    <ng-template ngbSlide *ngFor="let image of banners">
+                        <div class="picsum-img-wrapper">
+                            <img src="{{ image.image }}" width="900px" height="500px">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>First slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                    </ng-template>
+                </ngb-carousel>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>

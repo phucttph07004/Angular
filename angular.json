@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "PT14211": {
+        "Assignment": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/PT14211",
+                        "outputPath": "dist/Assignment",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -29,12 +29,12 @@
                         ],
                         "styles": [
                             "src/styles.scss",
-                            "node_modules/bootstrap/dist/css/bootstrap.min.css"
+                            "./node_modules/bootstrap/dist/css/bootstrap.min.css"
                         ],
                         "scripts": [
-                            "node_modules/jquery/dist/jquery.min.js",
-                            "node_modules/popper.js/dist/popper.min.js",
-                            "node_modules/bootstrap/dist/js/bootstrap.min.js"
+                            "./node_modules/jquery/dist/jquery.min.js",
+                            "./node_modules/popper.js/dist/popper.min.js",
+                            "./node_modules/bootstrap/dist/js/bootstrap.min.js"
                         ]
                     },
                     "configurations": {
@@ -68,18 +68,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "PT14211:build"
+                        "browserTarget": "Assignment:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "PT14211:build:production"
+                            "browserTarget": "Assignment:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "PT14211:build"
+                        "browserTarget": "Assignment:build"
                     }
                 },
                 "test": {
@@ -94,6 +94,8 @@
                             "src/assets"
                         ],
                         "styles": [
+                            "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
                             "src/styles.scss"
                         ],
                         "scripts": []
@@ -116,16 +118,16 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "PT14211:serve"
+                        "devServerTarget": "Assignment:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "PT14211:serve:production"
+                            "devServerTarget": "Assignment:serve:production"
                         }
                     }
                 }
             }
         }
     },
-    "defaultProject": "PT14211"
+    "defaultProject": "Assignment"
 }

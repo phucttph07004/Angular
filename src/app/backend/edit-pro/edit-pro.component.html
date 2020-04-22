@@ -1,0 +1,31 @@
+<form style="margin-top: 50px; margin-left: 30px; width: 600px;">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Tên Sản Phẩm</label>
+        <input style="font-size: 18px;" type="email" class="form-control" id="exampleFormControlInput1" name="name" [(ngModel)]="Product.name">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Nhãn Hiệu</label>
+        <input style="font-size: 18px;" type="email" class="form-control" id="exampleFormControlInput1" name="brand" [(ngModel)]="Product.brand">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Ảnh Sản Phẩm</label>
+        <img src="{{ Product.image }}" alt="">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Giá Sản Phẩm</label>
+        <input style="font-size: 18px;" type="text" class="form-control" id="exampleFormControlInput1" name="price" [(ngModel)]="Product.price">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Số Lượng Sản Phẩm</label>
+        <input style="font-size: 18px;" type="email" class="form-control" id="exampleFormControlInput1" name="quantity" [(ngModel)]="Product.quantity">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Mô Tả Ngắn</label>
+        <input style="font-size: 18px;" type="email" class="form-control" id="exampleFormControlInput1" name="short_description" [(ngModel)]="Product.short_description">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Mô tả Sản Phẩm</label>
+        <textarea style="font-size: 18px;" class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" [(ngModel)]="Product.description">{{ Product.description }}</textarea>
+    </div>
+    <button type="submit" (click)="SaveEditProduct()" class="btn btn-primary">Submit</button>
+</form>

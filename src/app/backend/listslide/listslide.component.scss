@@ -1,0 +1,30 @@
+span {
+    font-size: 12px;
+    float: left;
+}
+
+.i1 {
+    margin-left: 6px;
+    margin-top: -100spx;
+}
+
+#tr:hover {
+    background-color: #f4f6f9;
+}
+
+.hover {
+    /* display: none; */
+    float: left;
+    width: 1050px;
+    height: 90px;
+    padding-left: 515px;
+    padding-top: 6px;
+    position: absolute;
+    margin-left: -1000px;
+    margin-top: 2px;
+    opacity: 0;
+}
+
+.hover:hover {
+    opacity: 1;
+}

@@ -1,0 +1,53 @@
+<div class="card-header">
+    <!-- <h3 class="card-title">
+        <i class="fas fa-chart-pie mr-1"></i> Sales
+    </h3> -->
+    <table class="table" style="width: 1000px;">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Image</th>
+                <th scope="col">Created_at</th>
+                <th scope="col"></th>
+                <th scope="col">
+                    <a routerLink="/admin/create-banner">
+                        <button style="width: 70px;font-size: 14px;margin-left: 0px;" type="button" class="btn btn-primary">Create</button>
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="position: relative;" id="tr" *ngFor="let slide of banners | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize let i=index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td><img src="{{ slide.image }}" width="60px"></td>
+                <td><input type="date" value="{{ slide.created_at }}"></td>
+                <td></td>
+                <td></td>
+                <div class="hover">
+                    <a [routerLink]="['/admin/detail-banner/',slide.id]" class="single-btn">
+                        <span class="glyphicon glyphicon-eye-open">
+                            <i class="i1">Detail</i>
+                        </span>
+                    </a>
+                    <a [routerLink]="['/admin/edit-banner/',slide.id]" class="single-btn">
+                        <span style="margin-left: 15px;" class="glyphicon glyphicon-list-alt">
+                            <i class="i1">Update</i>
+                        </span>
+                    </a>
+                    <a onclick="return xoa()" style="cursor: pointer;color: blue;" (click)="Delete(slide.id)" class="single-btn">
+                        <span style="margin-left: 15px;" class="glyphicon glyphicon-trash">
+                            <i class="i1">Delete</i>
+                        </span>
+                    </a>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="banners.length" style="margin-left: 460px;float: left;"></ngb-pagination>
+
+<script>
+    function xoa() {
+        return confirm('Bạn có muốn xóa không');
+    }
+</script>

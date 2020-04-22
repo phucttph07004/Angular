@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<body>
+    <div class="site-wrapper" id="top">
+        <div class="site-header header-4 mb--20 d-none d-lg-block">
+            <div class="header-top header-top--style-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <ul class="header-top-list">
+                                <li class="dropdown-trigger currency-dropdown"><a href="">£ GBP </a>
+                                    <ul class="dropdown-box">
+                                        <li><a href="#">€ Euro</a></li>
+                                        <li><a href="#">£ Pound Sterling</a></li>
+                                        <li><a href="#">$ US Dollar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-trigger language-dropdown"><a href=""><span class="flag-img"><img
+                                                src="../../../assets/image/icon/eng-flag.png" alt=""></span>en-gb </a>
+                                    <ul class="dropdown-box">
+                                        <li>
+                                            <a href=""> <span class="flag-img"><img src="../../../assets/image/icon/germany-flag.png"
+                                                        alt=""></span>English</a>
+                                        </li>
+                                        <li>
+                                            <a href=""> <span class="flag-img"><img src="../../../assets/image/icon/germany-flag.png"
+                                                        alt=""></span>Germany</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-8 flex-lg-right">
+                            <ul class="header-top-list">
+                                <li><a href=""><span class="glyphicon glyphicon-piggy-bank"></span>My Compare</a>
+                                </li>
+                                <li class="dropdown-trigger language-dropdown">
+                                    <a href="">
+                                        <span class="glyphicon glyphicon-piggy-bank"></span> wishlist (0)</a>
+                                </li>
+                                <li class="dropdown-trigger language-dropdown"><a href=""><span class="glyphicon glyphicon-piggy-bank"></span>
+                                        My Account</a>
+                                    <ul class="dropdown-box">
+                                        <li> <a href="">My Account</a></li>
+                                        <li> <a href="">Order History</a></li>
+                                        <li> <a href="">Transactions</a></li>
+                                        <li> <a href="">Downloads</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href=""><span class="glyphicon glyphicon-piggy-bank"></span> Contact</a>
+                                </li>
+                                <li><a href=""><span class="glyphicon glyphicon-piggy-bank"></span> Checkout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle pt--10 pb--10">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3">
+                            <a href="index.html" class="site-brand">
+                                <img src="../../../assets/image/logo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="header-search-block">
+                                <input type="text" placeholder="Search entire store here">
+                                <button>Search</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="main-navigation flex-lg-right">
+                                <div class="cart-widget">
+                                    <div class="login-block">
+                                        <a href="login-register.html" class="font-weight-bold">Login</a> <br>
+                                        <span>or</span><a href="login-register.html">Register</a>
+                                    </div>
+                                    <div class="cart-block">
+                                        <div class="cart-total">
+                                            <span class="text-number">
+                                                1
+                                            </span>
+                                            <span class="text-item">
+                                                Shopping Cart
+                                            </span>
+                                            <span class="price">
+                                                £0.00
+                                                <i class="fas fa-chevron-down"></i>
+                                            </span>
+                                        </div>
+                                        <div class="cart-dropdown-block">
+                                            <div class=" single-cart-block ">
+                                                <div class="cart-product">
+                                                    <a href="product-details.html" class="image">
+                                                        <img src="../../../assets/image/products/cart-product-1.jpg" alt="">
+                                                    </a>
+                                                    <div class="content">
+                                                        <h3 class="title"><a href="product-details.html">Kodak PIXPRO
+                                                                Astro Zoom AZ421 16 MP</a>
+                                                        </h3>
+                                                        <p class="price"><span class="qty">1 ×</span> £87.34</p>
+                                                        <button class="cross-btn"><i class="fas fa-times"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=" single-cart-block ">
+                                                <div class="btn-block">
+                                                    <a href="cart.html" class="btn">View Cart <i
+                                                            class="fas fa-chevron-right"></i></a>
+                                                    <a href="checkout.html" class="btn btn--primary">Check Out <i
+                                                            class="fas fa-chevron-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3">
+                            <app-categories></app-categories>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="header-phone ">
+                                <div class="icon">
+                                    <i class="fas fa-headphones-alt"></i>
+                                </div>
+                                <div class="text">
+                                    <p>Free Support 24/7</p>
+                                    <p class="font-weight-bold number">+01-202-555-0181</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="main-navigation flex-lg-right">
+                                <ul class="main-menu menu-right li-last-0">
+                                    <li class="menu-item">
+                                        <a routerLink="/home">Home</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a routerLink="/new">News</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a routerLink="/service">Services</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a routerLink="/about">About</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a routerLink="/contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-mobile-menu">
+            <header class="mobile-header d-block d-lg-none pt--10 pb-md--10">
+                <div class="container">
+                    <div class="row align-items-sm-end align-items-center">
+                        <div class="col-md-4 col-7">
+                            <a href="index.html" class="site-brand">
+                                <img src="../../../assets/image/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!--=================================
+        Hero Area
+    ===================================== -->
+        <app-slide></app-slide>
+        <!--=================================
+        Home Features Section
+    ===================================== -->
+        <section class="mb--30">
+            <h2 class="sr-only">Feature Section</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 mt--30">
+                        <div class="feature-box h-100">
+                            <div class="icon">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                            </div>
+                            <div class="text">
+                                <h5>Free Shipping Item</h5>
+                                <p> Orders over $500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mt--30">
+                        <div class="feature-box h-100">
+                            <div class="icon">
+                                <span class="glyphicon glyphicon-euro"></span>
+                            </div>
+                            <div class="text">
+                                <h5>Money Back Guarantee</h5>
+                                <p>100% money back</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mt--30">
+                        <div class="feature-box h-100">
+                            <div class="icon">
+                                <span class="glyphicon glyphicon-piggy-bank"></span>
+                            </div>
+                            <div class="text">
+                                <h5>Cash On Delivery</h5>
+                                <p>Lorem ipsum dolor amet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mt--30">
+                        <div class="feature-box h-100">
+                            <div class="icon">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                            </div>
+                            <div class="text">
+                                <h5>Help & Support</h5>
+                                <p>Call us : + 0123.4567.89</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=================================
+        Home Category Gallery
+    ===================================== -->
+        <section class="section-margin">
+            <h2 class="sr-only">Category Gallery Section</h2>
+            <div class="container">
+                <div class="category-gallery-block">
+                    <a href="#" class="single-block hr-large">
+                        <img src="../../../assets/image/products/chup-anh-san-pham-thuc-pham-ruou-thuy-tinh-otus-studio-1.jpg" width="270px" height="408px">
+                    </a>
+                    <div class="single-block inner-block-wrapper">
+                        <a href="#" class="single-image mid-image">
+                            <img src="../../../assets/image/products/chup-anh-san-pham.jpg" width="470px" height="189px">
+                        </a>
+                        <a href="#" class="single-image small-image">
+                            <img src="../../../assets/image/products/kinh-nghiem-chup-anh-san-pham-dep2.jpg" width="370px" height="189px">
+                        </a>
+                        <a href="#" class="single-image small-image">
+                            <img src="../../../assets/image/products/29342648_2167667109926868_2111039331001041230_n.jpg" width="370px" height="189px">
+                        </a>
+                        <a href="#" class="single-image mid-image">
+                            <img src="../../../assets/image/products/chup-anh-san-pham-shynh-4.jpg" width="370px" height="189px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=================================
+        Home Two Column Section
+    ===================================== -->
+        <section class="section-margin">
+            <h1 class="sr-only">Promotion Section</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="home-right-side">
+                            <div class="single-block">
+                                <div class="sb-custom-tab text-lg-left text-center">
+                                    <ul style="margin-left: 293px;" class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="shop-tab" data-toggle="tab" href="#shop" role="tab" aria-controls="shop" aria-selected="true">
+                                            Featured Products
+                                        </a>
+                                            <span class="arrow-icon"></span>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="men-tab" data-toggle="tab" href="#men" role="tab" aria-controls="men" aria-selected="true">
+                                            New Arrivals
+                                        </a>
+                                            <span class="arrow-icon"></span>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="woman-tab" data-toggle="tab" href="#woman" role="tab" aria-controls="woman" aria-selected="false">
+                                            Most view products
+                                        </a>
+                                            <span class="arrow-icon"></span>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content space-db--30" id="myTabContent">
+
+
+                                        <app-products></app-products>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-block">
+                                <div class="row space-db--30">
+                                    <div class="col-lg-8 mb--30">
+                                        <a href="" class="promo-image promo-overlay">
+                                            <img src="image/bg-images/promo-banner-with-text-big.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 mb--30">
+                                        <a href="" class="promo-image promo-overlay">
+                                            <img src="image/bg-images/promo-banner-with-text-2--small.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal -->
+        <div class="modal fade modal-quick-view" id="quickModal" tabindex="-1" role="dialog" aria-labelledby="quickModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close modal-close-btn ml-auto" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--=================================
+    Footer
+===================================== -->
+    </div>
+    <!--=================================
+  Brands Slider
+===================================== -->
+    <section class="section-margin">
+        <h2 class="sr-only">Brand Slider</h2>
+        <div class="container">
+            <div style="height: 85px;" class="border-top border-bottom">
+                <div style="float: left;margin-top: 11px;">
+                    <img src="../../../assets/image/icon/thanhtoan1.png" height="60px">
+                </div>
+                <div style="float: left; margin-left: 9px;margin-top: 11px;">
+                    <img src="../../../assets/image/icon/thanhtoan2.png" height="60px">
+                </div>
+                <div style="float: left;margin-left: 9px;margin-top: 11px;">
+                    <img src="../../../assets/image/icon/thanhtoan3.png" height="60px">
+                </div>
+                <div style="float: left;margin-left: 9px;margin-top: 11px;">
+                    <img src="../../../assets/image/icon/thanhtoan4.png" height="60px">
+                </div>
+                <div style="float: left;margin-left: 9px;margin-top: 11px;">
+                    <img src="../../../assets/image/icon/thanhtoan5.png" height="60px">
+                </div>
+                <div style="float: left;margin-left: 9px;margin-top: 11px;">
+                    <img src="../../../assets/image/icon/thanhtoan6.png" height="60px">
+                </div>
+                <div style="float: left;margin-left: 9px;margin-top: 11px;">
+                    <img src="../../../assets/image/icon/thanhtoan2.png" height="60px">
+                </div>
+                <div style="float: left; margin-left: 9px;margin-top: 11px;">
+                    <img src="../../../assets/image/icon/thanhtoan1.png" height="60px">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=================================
+    Footer Area
+===================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row justify-content-between  section-padding">
+                <div class=" col-xl-3 col-lg-4 col-sm-6">
+                    <div class="single-footer pb--40">
+                        <div class="brand-footer footer-title">
+                            <img src="image/logo--footer.png" alt="">
+                        </div>
+                        <div class="footer-contact">
+                            <p><span class="label">Address:</span><span class="text">Example Street 98, HH2 BacHa, New
+                                    York,
+                                    USA</span></p>
+                            <p><span class="label">Phone:</span><span class="text">+18088 234 5678</span></p>
+                            <p><span class="label">Email:</span><span class="text">suport@hastech.com</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-2 col-sm-6">
+                    <div class="single-footer pb--40">
+                        <div class="footer-title">
+                            <h3>Information</h3>
+                        </div>
+                        <ul class="footer-list normal-list">
+                            <li><a href="">Prices drop</a></li>
+                            <li><a href="">New products</a></li>
+                            <li><a href="">Best sales</a></li>
+                            <li><a href="">Contact us</a></li>
+                            <li><a href="">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-2 col-sm-6">
+                    <div class="single-footer pb--40">
+                        <div class="footer-title">
+                            <h3>Extras</h3>
+                        </div>
+                        <ul class="footer-list normal-list">
+                            <li><a href="">Delivery</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Stores</a></li>
+                            <li><a href="">Contact us</a></li>
+                            <li><a href="">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-sm-6">
+                    <div class="footer-title">
+                        <h3>Newsletter Subscribe</h3>
+                    </div>
+                    <div class="newsletter-form mb--30">
+                        <form action="./php/mail.php">
+                            <input type="email" class="form-control" placeholder="Enter Your Email Address Here...">
+                            <button class="btn btn--primary w-100">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="social-block">
+                        <h3 class="title">STAY CONNECTED</h3>
+                        <ul class="social-list list-inline">
+                            <li class="single-social facebook"><a href=""><i class="ion ion-social-facebook"></i></a>
+                            </li>
+                            <li class="single-social twitter"><a href=""><i class="ion ion-social-twitter"></i></a></li>
+                            <li class="single-social google"><a href=""><i
+                                        class="ion ion-social-googleplus-outline"></i></a></li>
+                            <li class="single-social youtube"><a href=""><i class="ion ion-social-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-heading">Suspendisse in auctor augue. Cras fermentum est ac fermentum tempor. Etiam vel magna volutpat, posuere eros</p>
+                <a href="#" class="payment-block">
+                    <img src="../../../assets/image/icon/payment.png" alt="">
+                </a>
+                <p class="copyright-text">Copyright © 2019 <a href="#" class="author">Pustok</a>. All Right Reserved.
+                    <br> Design By Pustok</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

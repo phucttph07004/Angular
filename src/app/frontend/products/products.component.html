@@ -1,0 +1,45 @@
+<!-- class="single-slide" -->
+<!-- width="372px" height="186px" -->
+<div class="single-slide" *ngFor="let pro of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+    <div class="product-card" style="float: left;margin-left: 7.2px;margin-top: 50px;">
+        <div class="product-header">
+            <a href="" class="author">
+            Số Lượng: {{ pro.quantity }}
+        </a>
+            <h3><a href="product-details.html">{{ pro.name }}</a></h3>
+        </div>
+        <div class="product-card--body">
+            <div class="card-image">
+                <img src="{{ pro.image }}" width="365px" height="186px">
+                <div class="hover-contents">
+                    <a href="product-details.html" class="hover-image">
+                        <img src="{{ pro.image }}" width="365px" height="186px">
+                    </a>
+                    <div class="hover-btns">
+                        <a href="cart.html" class="single-btn">
+                            <i class="fas fa-shopping-basket"></i>
+                        </a>
+                        <!-- <a href="wishlist.html" class="single-btn">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                        <a href="compare.html" class="single-btn">
+                            <i class="fas fa-random"></i>
+                        </a> -->
+                        <a routerLink="/home/detail/{{ pro.id }}" class="single-btn">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="price-block">
+                <span class="price">$ {{ pro.price }}</span>
+                <del class="price-old">£51.20</del>
+                <span class="price-discount">20%</span>
+            </div>
+        </div>
+    </div>
+</div>
+<table>
+    <div style="clear: both; float: left; margin-left; width: 1349px;margin-top: 50px;">
+        <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="products.length" style="margin-left: 490px;float: left;"></ngb-pagination>
+    </div>

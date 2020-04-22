@@ -1,0 +1,11 @@
+<form style="margin-top: 50px; margin-left: 30px; width: 600px;">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Link Ảnh Sản Phẩm</label>
+        <input type="text" class="form-control" name="image" [(ngModel)]="Banner.image" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Ngày Tạo</label>
+        <input type="date" class="form-control" name="created_at" [(ngModel)]="Banner.created_at" id="exampleInputPassword1">
+    </div>
+    <button type="submit" (click)="addSlide()" class="btn btn-primary">Submit</button>
+</form>

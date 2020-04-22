@@ -1,0 +1,15 @@
+<form style="margin-top: 50px; margin-left: 30px; width: 600px;">
+    <div class="form-group">
+        <label for="exampleFormControlInput1"> Ảnh Banner cũ</label>
+        <img src="{{ Banner.image }}" alt="">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">link ảnh thay thế</label>
+        <input style="font-size: 18px;" type="text" class="form-control" id="exampleFormControlInput1" name="image" [(ngModel)]="Banner.image">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Ngày Tạo</label>
+        <input style="font-size: 18px;" type="date" class="form-control" id="exampleFormControlInput1" name="created_at" [(ngModel)]="Banner.created_at">
+    </div>
+    <button type="submit" (click)="editSlide()" class="btn btn-primary">Submit</button>
+</form>
