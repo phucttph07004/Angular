@@ -5,6 +5,7 @@ export class product{
     image:string;
     description:string;
     quantity:number;
+    cate_id:number;
     brand:string;
     short_description:string;
 }

@@ -15,7 +15,7 @@ export class ProductServiceService {
     private http: HttpClient,
   ) { }
 
-
+  
   products='https://5e7ae4130e0463001633261b.mockapi.io/products';
 
   getProduct(): Observable<product[]>{

@@ -7,6 +7,7 @@ import { FormsModule } from  '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './frontend/home/home.component';
+import { SearchComponent } from './frontend/search/search.component';
 import { ProductsComponent } from './frontend/products/products.component';
 import { CategoriesComponent } from './frontend/categories/categories.component';
 import { SlideComponent } from './frontend/slide/slide.component';
@@ -29,6 +30,12 @@ import { CreateNewComponent } from './backend/create-new/create-new.component';
 import { DetailNewComponent } from './backend/detail-new/detail-new.component';
 import { ListnewComponent } from './backend/listnew/listnew.component';
 import { DetailNewsComponent } from './frontend/detail-news/detail-news.component';
+import { ShowProductCateComponent } from './frontend/show-product-cate/show-product-cate.component';
+import { ListcateComponent } from './backend/listcate/listcate.component';
+import { DetailCateComponent } from './backend/detail-cate/detail-cate.component';
+import { CreateCateComponent } from './backend/create-cate/create-cate.component';
+import { EditCateComponent } from './backend/edit-cate/edit-cate.component';
+
 
 
 @NgModule({
@@ -57,6 +64,12 @@ import { DetailNewsComponent } from './frontend/detail-news/detail-news.componen
     DetailNewComponent,
     ListnewComponent,
     DetailNewsComponent,
+    ShowProductCateComponent,
+    ListcateComponent,
+    DetailCateComponent,
+    CreateCateComponent,
+    EditCateComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

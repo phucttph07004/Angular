@@ -67,8 +67,8 @@
                         </div>
                         <div class="col-lg-5">
                             <div class="header-search-block">
-                                <input type="text" placeholder="Search entire store here">
-                                <button>Search</button>
+                                <input type="text" placeholder="Search" [(ngModel)]="model" [ngbTypeahead]="search">
+                                <a routerLink="shop/search/{{  model }}"><button>Search</button></a>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -296,7 +296,8 @@
                                     <div class="tab-content space-db--30" id="myTabContent">
 
 
-                                        <app-products></app-products>
+                                        <!-- <app-products></app-products> -->
+                                        <router-outlet></router-outlet>
 
                                     </div>
                                 </div>

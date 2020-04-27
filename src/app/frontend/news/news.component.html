@@ -587,11 +587,11 @@
 
                     <div class="col-lg-4 col-md-6 mb-lg--60 mb--30" *ngFor="let new of News | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
                         <div class="blog-card card-style-grid">
-                            <a href="blog-details.html" class="image d-block">
+                            <a routerLink="/news/detail/{{ new.id }}" class="image d-block">
                                 <img src="{{ new.image }}" width="350px" height="230px">
                             </a>
                             <div class="card-content">
-                                <h3 class="title"><a href="blog-details.html">{{ new.title }}</a></h3>
+                                <h3 class="title"><a routerLink="/news/detail/{{ new.id }}">{{ new.title }}</a></h3>
                                 <p class="post-meta"><span>{{ new.created_at }} </span> | <a href="#">Hastech</a></p>
                                 <article>
                                     <h2 class="sr-only">

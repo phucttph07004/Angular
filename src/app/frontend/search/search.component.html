@@ -1,4 +1,4 @@
-<div class="single-slide" *ngFor="let pro of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+<div class="single-slide" *ngFor="let pro of search">
     <div class="product-card" style="float: left;margin-left: 7.2px;margin-top: 50px;">
         <div class="product-header">
             <a routerLink="/home/detail/{{ pro.id }}" class="author">
@@ -17,12 +17,6 @@
                         <a routerLink="/home/detail/{{ pro.id }}" class="single-btn">
                             <i class="fas fa-shopping-basket"></i>
                         </a>
-                        <!-- <a href="wishlist.html" class="single-btn">
-                            <i class="fas fa-heart"></i>
-                        </a>
-                        <a href="compare.html" class="single-btn">
-                            <i class="fas fa-random"></i>
-                        </a> -->
                         <a routerLink="/home/detail/{{ pro.id }}" class="single-btn">
                             <i class="fas fa-eye"></i>
                         </a>
@@ -38,6 +32,3 @@
     </div>
 </div>
 <table>
-    <div style="clear: both; float: left; margin-left; width: 1349px;margin-top: 50px;">
-        <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="products.length" style="margin-left: 490px;float: left;"></ngb-pagination>
-    </div>

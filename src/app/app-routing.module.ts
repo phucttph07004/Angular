@@ -10,6 +10,9 @@ import { ServiceComponent } from './frontend/service/service.component';
 import { DetailComponent } from './frontend/detail/detail.component';
 import { NewsComponent } from './frontend/news/news.component';
 import { DetailNewsComponent } from './frontend/detail-news/detail-news.component';
+import { ProductsComponent } from './frontend/products/products.component';
+import { ShowProductCateComponent } from './frontend/show-product-cate/show-product-cate.component';
+import { SearchComponent } from './frontend/search/search.component';
 
 // admim
 import { AdminComponent } from './backend/admin/admin.component';
@@ -29,6 +32,11 @@ import { CreateNewComponent } from './backend/create-new/create-new.component';
 import { DetailNewComponent } from './backend/detail-new/detail-new.component';
 import { ListnewComponent } from './backend/listnew/listnew.component';
 
+import { ListcateComponent } from './backend/listcate/listcate.component';
+import { DetailCateComponent } from './backend/detail-cate/detail-cate.component';
+import { CreateCateComponent } from './backend/create-cate/create-cate.component';
+import { EditCateComponent } from './backend/edit-cate/edit-cate.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -40,7 +48,10 @@ const routes: Routes = [
   { path: 'news/detail/:id', component: DetailNewsComponent},
   { path: 'home', component: HomeComponent,
   children: [
-    { path: '', component: HomeComponent},
+    { path: '', redirectTo: 'shop', pathMatch: 'full'},
+    { path: 'shop', component: ProductsComponent},
+    { path: 'category/:id', component: ShowProductCateComponent},
+    { path: 'shop/search/:search', component: SearchComponent},
   ]
 },
   { path: 'admin', component: AdminComponent,
@@ -58,9 +69,13 @@ const routes: Routes = [
     { path: 'create-new', component: CreateNewComponent},
     { path: 'detail-new/:id', component: DetailNewComponent},
     { path: 'edit-new/:id', component: EditNewComponent},
+    { path: 'category', component: ListcateComponent},
+    { path: 'detail-cate/:id', component: DetailCateComponent},
+    { path: 'edit-cate/:id', component: EditCateComponent},
+    { path: 'create-cate', component: CreateCateComponent},
   ]
 },
-  { path: '**', component: HomeComponent},
+  { path: '**', redirectTo: 'home', pathMatch: 'full'},
 ];
 
 

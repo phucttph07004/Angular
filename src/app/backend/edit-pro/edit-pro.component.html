@@ -1,5 +1,12 @@
 <form style="margin-top: 50px; margin-left: 30px; width: 600px;">
     <div class="form-group">
+        <label for="exampleFormControlInput1">Danh Mục Sản Phẩm</label>
+        <select class="form-control" name="cate_id" [(ngModel)]="Product.cate_id">
+            <option style="font-size: 18px;" value="{{ Cate_pro.id }}" selected >{{ Cate_pro.name }}</option>
+           <option style="font-size: 18px;" *ngFor="let cate of Category" value="{{ cate.id }}">{{ cate.name }}</option>
+       </select>
+    </div>
+    <div class="form-group">
         <label for="exampleFormControlInput1">Tên Sản Phẩm</label>
         <input style="font-size: 18px;" type="email" class="form-control" id="exampleFormControlInput1" name="name" [(ngModel)]="Product.name">
     </div>
